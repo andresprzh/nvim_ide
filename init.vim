@@ -1,6 +1,6 @@
 let NVIM_PATH =  expand('%:p:h')
 
-if has('win32')
+if has('win32') || has('win64')
   "---------------------Source--------------------
   source ~/AppData/Local/nvim/general/settings.vim
   "----------------Settings and Keys--------------
@@ -9,7 +9,7 @@ if has('win32')
   source ~/AppData/Local/nvim/plugins/plugins.vim
 endif
 
-if has("Linux")
+if has("unix") || has('wsl')
   "---------------------Source--------------------
   source ~/.config/nvim/general/settings.vim
   "----------------Settings and Keys--------------
