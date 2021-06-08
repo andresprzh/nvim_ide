@@ -8,13 +8,15 @@ nnoremap <C-M-Down>    :resize +2<CR>
 nnoremap <C-M-Right>    :vertical resize -2<CR>
 nnoremap <C-M-Left>    :vertical resize +2<CR>
 
-" I hate escape more than anything else
-"inoremap jk <Esc>
-"inoremap kj <Esc>
-
 " Easy CAPS
 inoremap <S-F3> <ESC>viw~i
 nnoremap <S-F3> viw~<Esc>
+
+" Copy words
+inoremap <C-c> <ESC>viwyi
+nnoremap <C-c> viwy<ESC>
+" Copy in visual mode with Ctr+c
+vnoremap <C-c> y
 
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
@@ -23,8 +25,7 @@ nnoremap <S-TAB> :bprevious<CR>
 
 " Alternate way to save
 nnoremap <C-s> :w<CR>
-" Alternate way to quit
-nnoremap <C-Q> :q<CR>
+nnoremap <C-q> :q<CR>
 " <TAB>: completion.
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 

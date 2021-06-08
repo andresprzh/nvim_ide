@@ -1,5 +1,3 @@
-let NVIM_PATH =  expand('%:p:h')
-
 if has('win32') || has('win64')
   "---------------------Source--------------------
   source ~/AppData/Local/nvim/general/settings.vim
@@ -7,6 +5,12 @@ if has('win32') || has('win64')
   source ~/AppData/Local/nvim/keys/mappings.vim
   "---------------------Plugins-------------------
   source ~/AppData/Local/nvim/plugins/plugins.vim
+  "---------------------Themes--------------------
+  source ~/AppData/Local/nvim/themes/onedark.vim
+  "source ~/AppData/Local/nvim/themes/nordvim.vim
+  source ~/AppData/Local/nvim/themes/airline.vim
+  "------------------CoC config-------------------
+  source ~/AppData/Local/nvim/modules/coc.vim
 endif
 
 if has("unix") || has('wsl')
@@ -16,4 +20,10 @@ if has("unix") || has('wsl')
   source ~/.config/nvim/keys/mappings.vim
   "---------------------Plugins-------------------
   source ~/.config/nvim/plugins/plugins.vim
+  "---------------------Themes--------------------
+  source ~/.config/nvim/themes/onedark.vim
+  "source ~/.config/nvim/themes/nordvim.vim
+  source ~/.config/nvim/themes/airline.vim
+  "------------------CoC config-------------------
+  source ~/.config/nvim/modules/coc.vim
 endif
