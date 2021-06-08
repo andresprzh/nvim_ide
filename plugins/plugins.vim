@@ -12,7 +12,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
         " Theme for nvim
         Plug 'joshdick/onedark.vim'
-        Plug 'arcticicestudio/nord-vim'
+        "Plug 'arcticicestudio/nord-vim'
         " Auto complete code
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
