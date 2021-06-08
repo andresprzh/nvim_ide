@@ -11,6 +11,8 @@ if has('win32') || has('win64')
   source ~/AppData/Local/nvim/themes/airline.vim
   "------------------CoC config-------------------
   source ~/AppData/Local/nvim/modules/coc.vim
+  "------------------FzF config-------------------
+  source ~/AppData/Local/nvim/modules/fzf.vim
 endif
 
 if has("unix") || has('wsl')
@@ -26,4 +28,6 @@ if has("unix") || has('wsl')
   source ~/.config/nvim/themes/airline.vim
   "------------------CoC config-------------------
   source ~/.config/nvim/modules/coc.vim
+  "------------------FzF config-------------------
+  source ~/.config/nvim/modules/fzf.vim
 endif

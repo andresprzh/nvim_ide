@@ -15,4 +15,8 @@ call plug#begin('~/.vim/plugged')
         "Plug 'arcticicestudio/nord-vim'
         " Auto complete code
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
+        "FZF & vim-rooter into vim
+        Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+        Plug 'junegunn/fzf.vim'
+        Plug 'airblade/vim-rooter'
 call plug#end()
