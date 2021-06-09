@@ -36,7 +36,8 @@ call plug#begin('~/.vim/plugged')
         Plug 'tpope/vim-fugitive'
         Plug 'tpope/vim-rhubarb'
         Plug 'junegunn/gv.vim'
-
+        Plug 'rhysd/git-messenger.vim'
+        
         " Markdown preview
         Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()

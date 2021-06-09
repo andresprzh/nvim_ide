@@ -46,3 +46,6 @@ nnoremap <Leader>O O<Esc>^Da
 
 " Close buffer
 nnoremap <C-d> :bd<CR>  
+
+" Git Message
+" nmap <Leader>gm <Plug>(git-messenger)
