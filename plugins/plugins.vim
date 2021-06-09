@@ -19,4 +19,13 @@ call plug#begin('~/.vim/plugged')
         Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
         Plug 'junegunn/fzf.vim'
         Plug 'airblade/vim-rooter'
+        "lua colorizer
+        Plug 'norcalli/nvim-colorizer.lua'
+        "Rainbow
+        Plug 'junegunn/rainbow_parentheses.vim'
+        " plugins to integrate git
+        Plug 'mhinz/vim-signify'
+        Plug 'tpope/vim-fugitive'
+        Plug 'tpope/vim-rhubarb'
+        Plug 'junegunn/gv.vim'
 call plug#end()

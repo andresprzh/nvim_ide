@@ -41,3 +41,6 @@ nnoremap <C-S-Right> <C-w>l
 
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
+
+" Close buffer
+nnoremap <C-d> :bd<CR>  
