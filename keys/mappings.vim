@@ -49,6 +49,19 @@ nmap <C-M-d> <Plug>Kwbd
 
 " comment
 nmap <C-]> <Plug>NERDCommenterToggle
+vmap <C-]> <Plug>NERDCommenterToggle<CR>gv
+
+
+if has('win32') || has('win64')
+  nmap <C-n> :split<CR>:resize 5<CR>:terminal powercfg.exe<CR>i
+endif
+if has("unix") || has('wsl')
+  nmap <C-n> :split<CR>:resize 5<CR>:terminal<CR>i
+endif
+
+" close terminal with ESC
+tnoremap <Esc> <C-\><C-n>
+tnoremap <Esc><Esc> <C-\><C-n>:q<CR>
 
 " Git Message
 " nmap <Leader>gm <Plug>(git-messenger)

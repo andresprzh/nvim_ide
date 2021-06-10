@@ -55,6 +55,8 @@ if has("unix") || has('wsl')
     source ~/.config/nvim/modules/signify.vim
     " NERD commenter
     source ~/.config/nvim/modules/nerdcommenter.vim
+    " avoid closing window when buffer is close
+    source ~/.config/nvim/modules/buffdelete.vim
     " multiple cursor selector
     source ~/.config/nvim/modules/multipleselector.vim
     " sneak conf
