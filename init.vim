@@ -19,6 +19,10 @@ if has('win32') || has('win64')
     source ~/AppData/Local/nvim/modules/nerdcommenter.vim
     " avoid closing window when buffer is close
     source ~/AppData/Local/nvim/modules/buffdelete.vim
+    " multiple cursor selector
+    source ~/AppData/Local/nvim/modules/multipleselector.vim
+    " sneak conf
+    source ~/AppData/Local/nvim/modules/sneak.vim
 
 
   "---------------------Themes--------------------
@@ -51,6 +55,10 @@ if has("unix") || has('wsl')
     source ~/.config/nvim/modules/signify.vim
     " NERD commenter
     source ~/.config/nvim/modules/nerdcommenter.vim
+    " multiple cursor selector
+    source ~/.config/nvim/modules/multipleselector.vim
+    " sneak conf
+    source ~/.config/nvim/modules/sneak.vim
 
 
   "---------------------Themes--------------------

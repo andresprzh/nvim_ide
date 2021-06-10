@@ -24,6 +24,18 @@ call plug#begin('~/.vim/plugged')
         " Auto pairs for '(' '[' '{'
         Plug 'jiangmiao/auto-pairs'
 
+        " Multiple cursor editor
+        Plug 'terryma/vim-multiple-cursors'
+
+        " Higlight yank area
+        Plug 'machakann/vim-highlightedyank'
+        
+        " folding code
+        Plug 'tmhedberg/SimpylFold'
+
+        " sneak jump in code
+        Plug 'justinmk/vim-sneak'
+
         "FZF & vim-rooter into vim
         Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
         Plug 'junegunn/fzf.vim'
