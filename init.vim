@@ -15,6 +15,10 @@ if has('win32') || has('win64')
     source ~/AppData/Local/nvim/modules/rainbow.vim
     "Git integration
     source ~/AppData/Local/nvim/modules/signify.vim
+    " NERD commenter
+    source ~/AppData/Local/nvim/modules/nerdcommenter.vim
+    " avoid closing window when buffer is close
+    source ~/AppData/Local/nvim/modules/buffdelete.vim
 
 
   "---------------------Themes--------------------
@@ -45,6 +49,8 @@ if has("unix") || has('wsl')
     source ~/.config/nvim/modules/rainbow.vim
     "Git integration
     source ~/.config/nvim/modules/signify.vim
+    " NERD commenter
+    source ~/.config/nvim/modules/nerdcommenter.vim
 
 
   "---------------------Themes--------------------

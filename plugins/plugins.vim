@@ -12,6 +12,10 @@ call plug#begin('~/.vim/plugged')
 
         " Auto complete code
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
+        Plug 'zchee/deoplete-jedi'
+
+        " Plug for comment
+        Plug 'scrooloose/nerdcommenter'
 
         " Theme for nvim
         Plug 'joshdick/onedark.vim'

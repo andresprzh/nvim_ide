@@ -45,7 +45,10 @@ nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
 
 " Close buffer
-nnoremap <C-d> :bd<CR>  
+nmap <C-M-d> <Plug>Kwbd
+
+" comment
+nmap <C-]> <Plug>NERDCommenterToggle
 
 " Git Message
 " nmap <Leader>gm <Plug>(git-messenger)
