@@ -53,7 +53,7 @@ vmap <C-]> <Plug>NERDCommenterToggle<CR>gv
 
 
 if has('win32') || has('win64')
-  nmap <C-n> :split<CR>:resize 5<CR>:terminal powercfg.exe<CR>i
+  nmap <C-n> :split<CR>:resize 5<CR>:terminal powershell.exe<CR>i
 endif
 if has("unix") || has('wsl')
   nmap <C-n> :split<CR>:resize 5<CR>:terminal<CR>i
