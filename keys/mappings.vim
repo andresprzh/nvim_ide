@@ -3,8 +3,8 @@ inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
 " Resize windows using ctr+Alt+(arrow keys)
-nnoremap <C-M-Up>    :resize -2<CR>
-nnoremap <C-M-Down>    :resize +2<CR>
+nnoremap <C-M-PageUp>    :resize -2<CR>
+nnoremap <C-M-PageDown>    :resize +2<CR>
 nnoremap <C-M-Right>    :vertical resize -2<CR>
 nnoremap <C-M-Left>    :vertical resize +2<CR>
 
@@ -37,8 +37,8 @@ vnoremap > >gv
 
 " Better window navigation use ctr+shift+(arrow keys)
 nnoremap <C-S-Left> <C-w>h
-nnoremap <C-S-Up> <C-w>j
-nnoremap <C-S-Down> <C-w>k
+nnoremap <C-S-Down> <C-w>j
+nnoremap <C-S-Up> <C-w>k
 nnoremap <C-S-Right> <C-w>l
 
 nnoremap <Leader>o o<Esc>^Da
