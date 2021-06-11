@@ -25,7 +25,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'jiangmiao/auto-pairs'
 
         " Multiple cursor editor
-        Plug 'terryma/vim-multiple-cursors'
+        Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
         " Higlight yank area
         Plug 'machakann/vim-highlightedyank'

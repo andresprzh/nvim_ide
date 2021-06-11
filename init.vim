@@ -20,7 +20,7 @@ if has('win32') || has('win64')
     " avoid closing window when buffer is close
     source ~/AppData/Local/nvim/modules/buffdelete.vim
     " multiple cursor selector
-    source ~/AppData/Local/nvim/modules/multipleselector.vim
+   source ~/AppData/Local/nvim/modules/multipleselector.vim
     " sneak conf
     source ~/AppData/Local/nvim/modules/sneak.vim
 

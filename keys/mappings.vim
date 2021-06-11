@@ -18,6 +18,12 @@ nnoremap <C-c> viwy<ESC>
 " Copy in visual mode with Ctr+c
 vnoremap <C-c> y
 
+" quote and unquote
+nnoremap ' ciw''<ESC>Pb
+nnoremap " ciw""<ESC>Pb
+nnoremap <Leader> daW"=substitute(@@,"'\\\|\"","","g")<CR>P
+nnoremap <Leader>" daW"=substitute(@@,"'\\\|\"","","g")<CR>P
+
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
 " SHIFT-TAB will go back
@@ -62,10 +68,17 @@ vnoremap <leader>g :SignifyToggle<CR>
 " nnoremap <leader>fg :Rg<CR>
 " nnoremap <leader>ft :Tags<CR>
 
+
+"" Telescope remaps
 nnoremap <C-p> <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" 
+nmap   <C-LeftMouse>         <Plug>(VM-Mouse-Cursor)
+nmap   <C-RightMouse>        <Plug>(VM-Mouse-Word)  
+nmap   <M-C-RightMouse>      <Plug>(VM-Mouse-Column)
 
 if has('win32') || has('win64')
   nmap <C-n> :split<CR>:resize 5<CR>:terminal powershell.exe<CR>i
