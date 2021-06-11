@@ -35,10 +35,16 @@ call plug#begin('~/.vim/plugged')
 
         " sneak jump in code
         Plug 'justinmk/vim-sneak'
-
-        "FZF & vim-rooter into vim
-        Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-        Plug 'junegunn/fzf.vim'
+        
+        " Telescope fuzzi finder
+        Plug 'nvim-lua/popup.nvim'
+        Plug 'nvim-lua/plenary.nvim' 
+        Plug 'nvim-telescope/telescope.nvim'
+        "FZF  
+        " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+        " Plug 'junegunn/fzf.vim'
+        
+        " vim-rooter 
         Plug 'airblade/vim-rooter'
 
         "lua colorizer
