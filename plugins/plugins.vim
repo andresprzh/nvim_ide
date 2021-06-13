@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
         " Auto complete code
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
         Plug 'zchee/deoplete-jedi'
+        Plug 'honza/vim-snippets'
 
         " Plug for comment
         Plug 'scrooloose/nerdcommenter'
@@ -62,4 +63,7 @@ call plug#begin('~/.vim/plugged')
         
         " Markdown preview
         Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+        " game to git gud
+        Plug 'ThePrimeagen/vim-be-good'
 call plug#end()

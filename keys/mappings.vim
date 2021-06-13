@@ -21,8 +21,6 @@ vnoremap <C-c> y
 " quote and unquote
 nnoremap ' ciw''<ESC>Pb
 nnoremap " ciw""<ESC>Pb
-nnoremap <Leader> daW"=substitute(@@,"'\\\|\"","","g")<CR>P
-nnoremap <Leader>" daW"=substitute(@@,"'\\\|\"","","g")<CR>P
 
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
