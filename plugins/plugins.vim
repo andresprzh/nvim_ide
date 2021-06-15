@@ -13,6 +13,7 @@ call plug#begin('~/.vim/plugged')
         " Auto complete code
         Plug 'neoclide/coc.nvim', {'branch': 'release'}
         Plug 'zchee/deoplete-jedi'
+        Plug 'honza/vim-snippets'
 
         " Plug for comment
         Plug 'scrooloose/nerdcommenter'
@@ -25,7 +26,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'jiangmiao/auto-pairs'
 
         " Multiple cursor editor
-        Plug 'terryma/vim-multiple-cursors'
+        Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
         " Higlight yank area
         Plug 'machakann/vim-highlightedyank'
@@ -35,10 +36,16 @@ call plug#begin('~/.vim/plugged')
 
         " sneak jump in code
         Plug 'justinmk/vim-sneak'
-
-        "FZF & vim-rooter into vim
-        Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-        Plug 'junegunn/fzf.vim'
+        
+        " Telescope fuzzi finder
+        Plug 'nvim-lua/popup.nvim'
+        Plug 'nvim-lua/plenary.nvim' 
+        Plug 'nvim-telescope/telescope.nvim'
+        "FZF  
+        " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+        " Plug 'junegunn/fzf.vim'
+        
+        " vim-rooter 
         Plug 'airblade/vim-rooter'
 
         "lua colorizer
@@ -56,4 +63,7 @@ call plug#begin('~/.vim/plugged')
         
         " Markdown preview
         Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+        " game to git gud
+        Plug 'ThePrimeagen/vim-be-good'
 call plug#end()
