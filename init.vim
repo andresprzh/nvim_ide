@@ -25,6 +25,8 @@ if has('win32') || has('win64')
     source ~/AppData/Local/nvim/modules/sneak.vim
     " Indent lines
     source ~/AppData/Local/nvim/modules/indentlines.vim
+    " Simple fold
+    source ~/AppData/Local/nvim/modules/simplyfold.vim
 
 
   "---------------------Themes--------------------
@@ -65,6 +67,8 @@ if has("unix") || has('wsl')
     source ~/.config/nvim/modules/sneak.vim
     " Indent lines
     source ~/.config/nvim/modules/indentlines.vim
+    " Simple fold
+    source ~/.config/nvim/modules/simplyfold.vim
 
 
   "---------------------Themes--------------------
