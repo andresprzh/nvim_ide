@@ -66,4 +66,7 @@ call plug#begin('~/.vim/plugged')
 
         " game to git gud
         Plug 'ThePrimeagen/vim-be-good'
+
+        " Indent lines
+        Plug 'Yggdroot/indentLine'
 call plug#end()
