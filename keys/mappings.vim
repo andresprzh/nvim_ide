@@ -8,6 +8,9 @@ nnoremap <C-M-j>    :resize +2<CR>
 nnoremap <C-M-l>    :vertical resize -2<CR>
 nnoremap <C-M-h>    :vertical resize +2<CR>
 
+" easy way to add line breaks
+nnoremap <S-o> o<ESC>
+
 " Easy CAPS
 inoremap <S-F3> <ESC>viw~i
 nnoremap <S-F3> viw~<Esc>
@@ -18,7 +21,7 @@ nnoremap <C-c> viwy<ESC>
 " Copy in visual mode with Ctr+c
 vnoremap <C-c> y
 
-" quote and unquote
+" quote and 
 nnoremap ' ciw''<ESC>Pb
 nnoremap " ciw""<ESC>Pb
 
