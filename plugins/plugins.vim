@@ -69,4 +69,7 @@ call plug#begin('~/.vim/plugged')
 
         " Indent lines
         Plug 'Yggdroot/indentLine'
+
+        " bookmarks  
+        Plug 'MattesGroeger/vim-bookmarks'
 call plug#end()

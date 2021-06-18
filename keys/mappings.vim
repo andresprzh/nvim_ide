@@ -9,7 +9,8 @@ nnoremap <C-M-l>    :vertical resize -2<CR>
 nnoremap <C-M-h>    :vertical resize +2<CR>
 
 " easy way to add line breaks
-nnoremap <S-o> o<ESC>
+nnoremap o o<ESC>
+nnoremap <S-o> <S-o><ESC>
 
 " Easy CAPS
 inoremap <S-F3> <ESC>viw~i
@@ -21,9 +22,12 @@ nnoremap <C-c> viwy<ESC>
 " Copy in visual mode with Ctr+c
 vnoremap <C-c> y
 
-" quote and 
+" quote and unquote
 nnoremap ' ciw''<ESC>Pb
 nnoremap " ciw""<ESC>Pb
+
+nnoremap <leader>' di'pbdb
+nnoremap <leader>" di"pbdb
 
 " TAB in general mode will move to text buffer
 nnoremap <TAB> :bnext<CR>
