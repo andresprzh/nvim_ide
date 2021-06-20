@@ -9,8 +9,8 @@ nnoremap <C-M-l>    :vertical resize -2<CR>
 nnoremap <C-M-h>    :vertical resize +2<CR>
 
 " easy way to add line breaks
-nnoremap o o<ESC>
-nnoremap <S-o> <S-o><ESC>
+" nnoremap o o<ESC>
+" nnoremap <S-o> <S-o><ESC>
 
 " Easy CAPS
 inoremap <S-F3> <ESC>viw~i
