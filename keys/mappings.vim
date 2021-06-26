@@ -12,6 +12,10 @@ nnoremap <C-M-h>    :vertical resize +2<CR>
 " nnoremap o o<ESC>
 " nnoremap <S-o> <S-o><ESC>
 
+" alternative' way to go to normal mode
+inoremap <C-j> <ESC>
+vnoremap <C-j> <ESC>
+
 " Easy CAPS
 inoremap <S-F3> <ESC>viw~i
 nnoremap <S-F3> viw~<Esc>
