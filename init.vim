@@ -27,8 +27,9 @@ if has('win32') || has('win64')
     source ~/AppData/Local/nvim/modules/indentlines.vim
     " Simple fold
     source ~/AppData/Local/nvim/modules/simplyfold.vim
-
-
+    " Telescope
+    source ~/AppData/Local/nvim/modules/telescope.vim
+ 
   "---------------------Themes--------------------
   source ~/AppData/Local/nvim/themes/onedark.vim
   "source ~/AppData/Local/nvim/themes/nordvim.vim
@@ -69,8 +70,9 @@ if has("unix") || has('wsl')
     source ~/.config/nvim/modules/indentlines.vim
     " Simple fold
     source ~/.config/nvim/modules/simplyfold.vim
-
-
+    " Telescope
+    source ~/.config/nvim/modules/telescope.vim
+ 
   "---------------------Themes--------------------
   source ~/.config/nvim/themes/onedark.vim
   "source ~/.config/nvim/themes/nordvim.vim
