@@ -10,7 +10,7 @@ if has('win32') || has('win64')
     "CoC config
     source ~/AppData/Local/nvim/modules/coc.vim
     "FzF config
-    source ~/AppData/Local/nvim/modules/fzf.vim
+    " source ~/AppData/Local/nvim/modules/fzf.vim
     "Rainbow
     source ~/AppData/Local/nvim/modules/rainbow.vim
     "Git integration
@@ -18,7 +18,7 @@ if has('win32') || has('win64')
     " NERD commenter
     source ~/AppData/Local/nvim/modules/nerdcommenter.vim
     " avoid closing window when buffer is close
-    source ~/AppData/Local/nvim/modules/buffdelete.vim
+    " source ~/AppData/Local/nvim/modules/buffdelete.vim
     " multiple cursor selector
     source ~/AppData/Local/nvim/modules/multipleselector.vim
     " sneak conf
@@ -42,7 +42,7 @@ endif
 
 if has("unix") || has('wsl')
   
-   "---------------------Source--------------------
+  "---------------------Source--------------------
   source ~/.config/nvim/general/settings.vim
 
   "----------------Settings and Keys--------------
@@ -53,7 +53,7 @@ if has("unix") || has('wsl')
     "CoC config
     source ~/.config/nvim/modules/coc.vim
     "FzF config
-    source ~/.config/nvim/modules/fzf.vim
+    " source ~/.config/nvim/modules/fzf.vim
     "Rainbow
     source ~/.config/nvim/modules/rainbow.vim
     "Git integration
@@ -61,7 +61,7 @@ if has("unix") || has('wsl')
     " NERD commenter
     source ~/.config/nvim/modules/nerdcommenter.vim
     " avoid closing window when buffer is close
-    source ~/.config/nvim/modules/buffdelete.vim
+    " source ~/.config/nvim/modules/buffdelete.vim
     " multiple cursor selector
     source ~/.config/nvim/modules/multipleselector.vim
     " sneak conf
@@ -75,7 +75,7 @@ if has("unix") || has('wsl')
  
   "---------------------Themes--------------------
   source ~/.config/nvim/themes/onedark.vim
-  "source ~/.config/nvim/themes/nordvim.vim
+  " source ~/.config/nvim/themes/nordvim.vim
   source ~/.config/nvim/themes/airline.vim
 
   "------------------Lua Modules------------------

@@ -60,7 +60,9 @@ nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
 
 " Close buffer
-nmap <C-M-d> <Plug>Kwbd
+" nmap <C-M-d> <Plug>Kwbd
+nmap <C-M-d> :BufferClose<CR>
+nmap <C-M-c> :BufferCloseAllButCurrent<CR>
 
 " comment
 nmap <C-]> <Plug>NERDCommenterToggle

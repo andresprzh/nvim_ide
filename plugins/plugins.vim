@@ -72,4 +72,9 @@ call plug#begin('~/.vim/plugged')
 
         " bookmarks  
         Plug 'MattesGroeger/vim-bookmarks'
+
+        " Change tab bar in nvim
+        Plug 'kyazdani42/nvim-web-devicons'
+        Plug 'romgrk/barbar.nvim'
+        
 call plug#end()
