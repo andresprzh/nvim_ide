@@ -42,18 +42,21 @@ endif
 
 if has("unix") || has('wsl')
   
-  "---------------------Source--------------------
+  " "---------------------Source--------------------
   source ~/.config/nvim/general/settings.vim
-
-  "----------------Settings and Keys--------------
+  "
+  " "----------------Settings and Keys--------------
   source ~/.config/nvim/keys/mappings.vim
-
-  "---------------------Plugins-------------------
+  "
+  " "---------------------Plugins-------------------
   source ~/.config/nvim/plugins/plugins.vim
-    "CoC config
-    source ~/.config/nvim/modules/coc.vim
-    "FzF config
-    " source ~/.config/nvim/modules/fzf.vim
+  "   "CoC config
+  "   source ~/.config/nvim/modules/coc.vim
+    "LSP
+    source ~/.config/nvim/modules/lsp-config.vim
+    luafile  ~/.config/nvim/lua/plugins/compe-config.lua
+    luafile  ~/.config/nvim/lua/language-servers.lua
+
     "Rainbow
     source ~/.config/nvim/modules/rainbow.vim
     "Git integration
@@ -72,8 +75,8 @@ if has("unix") || has('wsl')
     source ~/.config/nvim/modules/simplyfold.vim
     " Telescope
     source ~/.config/nvim/modules/telescope.vim
- 
-  "---------------------Themes--------------------
+
+  " "---------------------Themes--------------------
   source ~/.config/nvim/themes/onedark.vim
   " source ~/.config/nvim/themes/nordvim.vim
   source ~/.config/nvim/themes/airline.vim
