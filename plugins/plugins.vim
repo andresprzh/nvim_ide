@@ -6,6 +6,9 @@
 " endif
 call plug#begin('~/.vim/plugged')
 
+        " " " File Explorer
+        " " Plug 'scrooloose/NERDTree'
+
         " Better Syntax Support
         " Plug 'sheerun/vim-polyglot'
 
