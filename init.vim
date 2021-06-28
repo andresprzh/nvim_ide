@@ -29,6 +29,8 @@ if has('win32') || has('win64')
     source ~/AppData/Local/nvim/modules/simplyfold.vim
     " Telescope
     source ~/AppData/Local/nvim/modules/telescope.vim
+    " Startify
+    source ~/AppData/Local/nvim/modules/startscreen.vim
  
   "---------------------Themes--------------------
   source ~/AppData/Local/nvim/themes/onedark.vim
@@ -72,6 +74,8 @@ if has("unix") || has('wsl')
     source ~/.config/nvim/modules/simplyfold.vim
     " Telescope
     source ~/.config/nvim/modules/telescope.vim
+    " Startify
+    source ~/.config/nvim/modules/startscreen.vim
  
   "---------------------Themes--------------------
   source ~/.config/nvim/themes/onedark.vim

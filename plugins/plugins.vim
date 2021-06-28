@@ -1,5 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
+        " Startify
+        Plug 'mhinz/vim-startify'
+
         " " " File Explorer
         " " Plug 'scrooloose/NERDTree'
 
