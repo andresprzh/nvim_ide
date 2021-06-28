@@ -6,8 +6,8 @@
 " endif
 call plug#begin('~/.vim/plugged')
 
-        " " " File Explorer
-        " " Plug 'scrooloose/NERDTree'
+        " File Explorer
+        Plug 'scrooloose/NERDTree'
 
         " Better Syntax Support
         " Plug 'sheerun/vim-polyglot'
@@ -21,15 +21,14 @@ call plug#begin('~/.vim/plugged')
 
         " Auto complete code
         " Plug 'neoclide/coc.nvim', {'branch': 'release'}
-        Plug 'zchee/deoplete-jedi'
-        Plug 'honza/vim-snippets'
-        " Plug 'hrsh7th/vim-vsnip'
-
-
-        " Intellisense
+        " Plug 'zchee/deoplete-jedi'
+        " Plug 'honza/vim-snippets'
+        Plug 'hrsh7th/vim-vsnip'
+        " LSP
         Plug 'neovim/nvim-lspconfig'
+        " Plug 'nvim-lua/completion-nvim'
         Plug 'hrsh7th/nvim-compe'
-        Plug 'kabouzeid/nvim-lspinstall'
+        " Plug 'kabouzeid/nvim-lspinstall'
 
         " " Plug for comment
         Plug 'scrooloose/nerdcommenter'

@@ -8,7 +8,7 @@ if has('win32') || has('win64')
   "---------------------Plugins-------------------
   source ~/AppData/Local/nvim/plugins/plugins.vim
     "CoC config
-    source ~/AppData/Local/nvim/modules/coc.vim
+    " source ~/AppData/Local/nvim/modules/coc.vim
     "FzF config
     " source ~/AppData/Local/nvim/modules/fzf.vim
     "Rainbow
