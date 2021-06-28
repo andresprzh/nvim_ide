@@ -1,8 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
-        " " File Explorer
-        " Plug 'scrooloose/NERDTree'
-        
+        " " " File Explorer
+        " " Plug 'scrooloose/NERDTree'
+
         " Better Syntax Support
         Plug 'sheerun/vim-polyglot'
 
@@ -30,22 +30,22 @@ call plug#begin('~/.vim/plugged')
 
         " Higlight yank area
         Plug 'machakann/vim-highlightedyank'
-        
+
         " folding code
         Plug 'tmhedberg/SimpylFold'
 
         " sneak jump in code
         Plug 'justinmk/vim-sneak'
-        
+
         " Telescope fuzzi finder
         Plug 'nvim-lua/popup.nvim'
-        Plug 'nvim-lua/plenary.nvim' 
+        Plug 'nvim-lua/plenary.nvim'
         Plug 'nvim-telescope/telescope.nvim'
-        "FZF  
+        "FZF
         " Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
         " Plug 'junegunn/fzf.vim'
-        
-        " vim-rooter 
+
+        " vim-rooter
         Plug 'airblade/vim-rooter'
 
         "lua colorizer
@@ -53,14 +53,14 @@ call plug#begin('~/.vim/plugged')
 
         "Rainbow
         Plug 'junegunn/rainbow_parentheses.vim'
-        
+
         " plugins to integrate git
         Plug 'mhinz/vim-signify'
         Plug 'tpope/vim-fugitive'
         Plug 'tpope/vim-rhubarb'
         Plug 'junegunn/gv.vim'
         Plug 'rhysd/git-messenger.vim'
-        
+
         " Markdown preview
         Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
@@ -70,7 +70,7 @@ call plug#begin('~/.vim/plugged')
         " Indent lines
         Plug 'Yggdroot/indentLine'
 
-        " bookmarks  
+        " bookmarks
         Plug 'MattesGroeger/vim-bookmarks'
 
         " Change tab bar in nvim
