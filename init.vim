@@ -86,4 +86,6 @@ if has("unix") || has('wsl')
   "Colorizer
   luafile ~/.config/nvim/lua/plug-colorizer.lua
 
+  let g:python3_host_prog = '/usr/bin/python3'
+
 endif
