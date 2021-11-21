@@ -79,5 +79,8 @@ call plug#begin('~/.vim/plugged')
         " Change tab bar in nvim
         Plug 'kyazdani42/nvim-web-devicons'
         Plug 'romgrk/barbar.nvim'
-        
+
+        " Treesitter
+        Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 call plug#end()
