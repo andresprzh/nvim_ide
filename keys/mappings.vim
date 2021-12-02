@@ -91,11 +91,16 @@ nmap   <C-LeftMouse>         <Plug>(VM-Mouse-Cursor)
 nmap   <C-RightMouse>        <Plug>(VM-Mouse-Word)  
 nmap   <M-C-RightMouse>      <Plug>(VM-Mouse-Column)
 
+" Formating
+xmap <leader>h  <Plug>(coc-format-selected)
+nmap <leader>h  <Plug>(coc-format-selected)
+nmap <C-M-f> :call CocAction('format')<CR>
+
 if has('win32') || has('win64')
-  nmap <C-n> :split<CR>:resize 5<CR>:terminal powershell.exe<CR>i
+  nmap <C-M-n> :split<CR>:resize 5<CR>:terminal powershell.exe<CR>i
 endif
 if has("unix") || has('wsl')
-  nmap <C-n> :split<CR>:resize 5<CR>:terminal<CR>i
+  nmap <C-M-n> :split<CR>:resize 5<CR>:terminal<CR>i
 endif
 
 " close terminal with ESC
