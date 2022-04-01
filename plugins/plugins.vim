@@ -83,4 +83,7 @@ call plug#begin('~/.vim/plugged')
         " Treesitter
         Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
+        " Github Copilot
+        Plug 'github/copilot.vim'
+
 call plug#end()
