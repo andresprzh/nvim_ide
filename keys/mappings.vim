@@ -29,6 +29,8 @@ vnoremap <C-c> y
 " quote and unquote
 nnoremap ' ciw''<ESC>Pb
 nnoremap " ciw""<ESC>Pb
+vnoremap ' c''<ESC>P
+vnoremap " c""<ESC>P
 
 nnoremap <leader>' di'pbdb
 nnoremap <leader>" di"pbdb
