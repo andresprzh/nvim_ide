@@ -17,8 +17,12 @@ inoremap <C-j> <ESC>
 vnoremap <C-j> <ESC>
 
 " Easy CAPS
-inoremap <S-F3> <ESC>viw~i
-nnoremap <S-F3> viw~<Esc>
+" Make the work that the cursor is currently in insert and normal to toggle
+" case
+inoremap <F3> <ESC>viw~i
+nnoremap <F3> viw~<Esc>
+" Use F3 to toggle case for the selected text
+vnoremap <F3> ~
 
 " Copy words
 inoremap <C-c> <ESC>viwyi
@@ -32,6 +36,7 @@ nnoremap " ciw""<ESC>Pb
 vnoremap ' c''<ESC>P
 vnoremap " c""<ESC>P
 
+" remove qote of the current word
 nnoremap <leader>' di'pbdb
 nnoremap <leader>" di"pbdb
 
@@ -52,14 +57,9 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 vnoremap < <gv
 vnoremap > >gv
 
-" Better window navigation use ctr+shift+(arrow keys)
-nnoremap <C-S-Left> <C-w>h
-nnoremap <C-S-Down> <C-w>j
-nnoremap <C-S-Up> <C-w>k
-nnoremap <C-S-Right> <C-w>l
-
-nnoremap <Leader>o o<Esc>^Da
-nnoremap <Leader>O O<Esc>^Da
+ 
+" nnoremap <Leader>o o<Esc>^Da
+" nnoremap <Leader>O O<Esc>^Da
 
 " Close buffer
 " nmap <C-M-d> <Plug>Kwbd
@@ -70,9 +70,12 @@ nmap <C-M-c> :BufferCloseAllButCurrent<CR>
 nmap <C-]> <Plug>NERDCommenterToggle
 vmap <C-]> <Plug>NERDCommenterToggle<CR>gv
 
-" signify git toggle
-nnoremap <leader>g :SignifyToggle<CR>
-vnoremap <leader>g :SignifyToggle<CR>
+" signify and Git shortcuts also in modules/signify.vim
+nnoremap <leader>gg :SignifyHunkDiff<CR>
+nnoremap <leader>ge :Gdiffsplit<CR>
+nnoremap <leader>gv :GV<CR>
+" nnoremap <leader>g :SignifyToggle<CR>
+" vnoremap <leader>g :SignifyToggle<CR>
 
 " fuzzi search remaps
 " map <C-p> :FZF<CR>
@@ -108,5 +111,8 @@ endif
 tnoremap <Esc> <C-\><C-n>
 tnoremap <Esc><Esc> <C-\><C-n>:q<CR>
 
+" Tggle the Tagbar that show the tags of current file (classes, functions,
+" variables)
+nnoremap <leader>; :TagbarToggle<cr>
 " Git Message
 " nmap <Leader>gm <Plug>(git-messenger)

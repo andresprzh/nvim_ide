@@ -86,4 +86,7 @@ call plug#begin('~/.vim/plugged')
         " Github Copilot
         " Plug 'github/copilot.vim'
 
+
+        " tagbar
+        Plug 'majutsushi/tagbar'
 call plug#end()
