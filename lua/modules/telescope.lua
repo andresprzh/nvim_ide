@@ -1,4 +1,3 @@
-lua << EOF
 local actions = require('telescope.actions')
 require('telescope').setup{
   config = {
@@ -56,4 +55,3 @@ require('telescope').setup{
     buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker
   }
 }
-EOF

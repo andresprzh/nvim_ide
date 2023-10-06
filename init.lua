@@ -1,4 +1,4 @@
--- Auto-install packer.nvim if not exists
+-- Auto-install lazy.nvim if not exists
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -6,23 +6,11 @@ if not vim.loop.fs_stat(lazypath) then
     "clone",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
+    "--branch=stable", -- latest stable eelease
     lazypath,
   })
 end
 vim.opt.rtp:prepend(lazypath)
-
--- Get the base_path where the nvim configuration file is according to the operation system
-local os_name = vim.loop.os_uname().sysname
-local base_path
--- if vim.fn.has('win32') or vim.fn.has('win64') then
-if os_name == "Windows_NT" then
-    base_path = "~/AppData/Local"
-else
-    base_path = "~/.config"
-end
-
-
 
 -----------------------Source--------------------
 require("general.settings")
@@ -31,40 +19,34 @@ require("general.settings")
 require("keys.mappings")
 
 ---------------------Plugins-------------------
--- require("plugins.plugins")
-require("lazy").setup("plugins")
+require("lazy").setup("plugins") -- See plugins from any lua file that is in the folder lua/plugins/*.lua
 
 --CoC config
-vim.cmd('source' .. base_path .. '/nvim/modules/coc.vim')
-
---FzF config
--- vim.cmd('source' .. base_path .. '/nvim/modules/fzf.vim')  -- This is commented out as in the original .vim file
+require("lua.modules.coc")
 --Rainbow
-vim.cmd('source' .. base_path .. '/nvim/modules/rainbow.vim')
+require("lua.modules.rainbow")
 --Git integration
-vim.cmd('source' .. base_path .. '/nvim/modules/signify.vim')
+require("lua.modules.signify")
 -- NERD commenter
-vim.cmd('source' .. base_path .. '/nvim/modules/nerdcommenter.vim')
--- avoid closing window when buffer is close
--- vim.cmd('source' .. base_path .. '/nvim/modules/buffdelete.vim')  -- This is commented out as in the original .vim file
+require("lua.modules.nerdcommenter")
 -- multiple cursor selector
-vim.cmd('source' .. base_path .. '/nvim/modules/multipleselector.vim')
+require("lua.modules.multipleselector")
 -- sneak conf
-vim.cmd('source' .. base_path .. '/nvim/modules/sneak.vim')
+require("lua.modules.sneak")
 -- Indent lines
-vim.cmd('source' .. base_path .. '/nvim/modules/indentlines.vim')
+require("lua.modules.indentlines")
 -- Simple fold
-vim.cmd('source' .. base_path .. '/nvim/modules/simplyfold.vim')
+require("lua.modules.simplyfold")
 -- Telescope
-vim.cmd('source' .. base_path .. '/nvim/modules/telescope.vim')
+require("lua.modules.telescope")
 -- Startify
-vim.cmd('source' .. base_path .. '/nvim/modules/startscreen.vim')
+require("lua.modules.startscreen")
 
 -----------------------Themes--------------------
 require('themes.onedark')
 require('themes.airline')
 
--- --------------------Lua Modules------------------
--- --Colorizer
--- require("modules.plug-colorizer")
+--------------------Lua Modules------------------
+--Colorizer
+require("lua.modules.plug-colorizer")
 

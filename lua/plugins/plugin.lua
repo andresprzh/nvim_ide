@@ -30,9 +30,6 @@ return {
     -- Higlight yank area
     {'machakann/vim-highlightedyank'},
 
-    -- folding code
-    {'tmhedberg/SimpylFold'},
-
     -- sneak jump in code
     {'justinmk/vim-sneak'},
 
@@ -60,9 +57,6 @@ return {
     -- Markdown preview
     {'iamcco/markdown-preview.nvim', run = 'mkdp#util#install()', ft = {'markdown', 'vim-plug'}},
 
-    -- game to git gud
-    {'ThePrimeagen/vim-be-good'},
-
     -- Indent lines
     {'Yggdroot/indentLine'},
 
@@ -73,10 +67,9 @@ return {
     {'kyazdani42/nvim-web-devicons'},
     {'romgrk/barbar.nvim'},
 
-    -- -- Treesitter
-    -- {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'},
-
     -- tagbar
     {'majutsushi/tagbar'},
 
+    -- folding code
+    {'tmhedberg/SimpylFold'},
 }
