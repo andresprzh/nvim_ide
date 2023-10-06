@@ -230,6 +230,6 @@ vim.g.coc_explorer_global_presets = {
     }
 }
 -- Open exploorer
-keyset("n", "<space>f", ":CocCommand explorer --preset floating<CR>", opts)
+keyset("n", "<space><S-e>", ":CocCommand explorer --preset floating<CR>", opts)
 -- Open exploorer side
 keyset("n", "<space>e", ":CocCommand explorer --preset simplify<CR>", opts)
