@@ -3,7 +3,7 @@ vim.g.mapleader = " "  -- Set leader key to space
 
 vim.cmd('syntax enable')                -- Enables syntax highlighing
 vim.opt.hlsearch = false                -- Disable the highlighting
-vim.opt.cursorline = true               -- Enable highlighting of the current line (commented out as in the original .vim file)
+-- vim.opt.cursorline = true               -- Enable highlighting of the current line (commented out as in the original .vim file)
 vim.opt.hidden = true                   -- Required to keep multiple buffers open multiple buffers
 vim.cmd('set nowrap')                   -- Display long lines as just one line
 vim.opt.encoding = 'utf-8'              -- The encoding displayed
@@ -50,3 +50,4 @@ vim.api.nvim_exec([[
 
 -- -- You can't stop me
 vim.api.nvim_command('cmap w!! w !sudo tee %')  -- " set leader key
+vim.cmd[[set modifiable]]
