@@ -13,10 +13,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -----------------------Source--------------------
-require("general.settings")
+require("lua.general.settings")
 
 ------------------Settings and Keys--------------
-require("keys.mappings")
+require("lua.keys.mappings")
 
 ---------------------Plugins-------------------
 require("lazy").setup("plugins") -- See plugins from any lua file that is in the folder lua/plugins/*.lua
