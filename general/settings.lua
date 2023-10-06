@@ -41,13 +41,12 @@ vim.opt.foldenable = false              -- Disable folding
 vim.opt.foldlevel = 2                   -- Set foldlevel to 2
 
 -- Auto source when writing to init.vm alternatively you can run :source $MYVIMRC
-vim.api.nvim_exec([[
-  augroup MyAutoCmd
-    autocmd!
-    autocmd BufWritePost init.lua source %
-  augroup END
-]], false)
+-- vim.api.nvim_exec([[
+--   augroup MyAutoCmd
+--     autocmd!
+--     autocmd BufWritePost init.lua source %
+--   augroup END
+-- ]], false)
 
 -- -- You can't stop me
 vim.api.nvim_command('cmap w!! w !sudo tee %')  -- " set leader key
-vim.cmd[[set modifiable]]

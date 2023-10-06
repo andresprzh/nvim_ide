@@ -1,5 +1,4 @@
 -- Auto-install packer.nvim if not exists
-vim.cmd[[set modifiable]]
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -12,14 +11,17 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappings are correct
-require("lazy").setup("plugins")
 
-if vim.fn.has('win32') or vim.fn.has('win64') then
+-- Get the base_path where the nvim configuration file is according to the operation system
+local os_name = vim.loop.os_uname().sysname
+local base_path
+-- if vim.fn.has('win32') or vim.fn.has('win64') then
+if os_name == "Windows_NT" then
     base_path = "~/AppData/Local"
 else
     base_path = "~/.config"
 end
+
 
 
 -----------------------Source--------------------
@@ -30,8 +32,9 @@ require("keys.mappings")
 
 ---------------------Plugins-------------------
 -- require("plugins.plugins")
+require("lazy").setup("plugins")
 
--- --CoC config
+--CoC config
 vim.cmd('source' .. base_path .. '/nvim/modules/coc.vim')
 
 --FzF config
@@ -61,7 +64,7 @@ vim.cmd('source' .. base_path .. '/nvim/modules/startscreen.vim')
 require('themes.onedark')
 require('themes.airline')
 
---------------------Lua Modules------------------
---Colorizer
-require("modules.plug-colorizer")
+-- --------------------Lua Modules------------------
+-- --Colorizer
+-- require("modules.plug-colorizer")
 
