@@ -29,8 +29,6 @@ require("modules.rainbow")
 require("modules.signify")
 -- NERD commenter
 require("modules.nerdcommenter")
--- multiple cursor selector
-require("modules.multipleselector")
 -- sneak conf
 require("modules.sneak")
 -- Indent lines
