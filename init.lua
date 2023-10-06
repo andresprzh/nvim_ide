@@ -1,17 +1,27 @@
--- Auto install packer.nvim if not exists
-local install_path = vim.fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-  vim.fn.execute('!git clone --depth 1 https://github.com/wbthomason/packer.nvim '..install_path)
+-- Auto-install packer.nvim if not exists
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
--- Determine the OS and set the base path accordingly
+vim.opt.rtp:prepend(lazypath)
+
+-- Get the base_path where the nvim configuration file is according to the operation system
 local os_name = vim.loop.os_uname().sysname
 local base_path
-
-if os_name == "Windows_NT" then  -- or use if vim.fn.has('win32') or vim.fn.has('win64') then
+-- if vim.fn.has('win32') or vim.fn.has('win64') then
+if os_name == "Windows_NT" then
     base_path = "~/AppData/Local"
 else
     base_path = "~/.config"
 end
+
 
 
 -----------------------Source--------------------
@@ -20,8 +30,9 @@ require("general.settings")
 ------------------Settings and Keys--------------
 require("keys.mappings")
 
------------------------Plugins-------------------
-require("plugins.plugins")
+---------------------Plugins-------------------
+-- require("plugins.plugins")
+require("lazy").setup("plugins")
 
 --CoC config
 vim.cmd('source' .. base_path .. '/nvim/modules/coc.vim')
@@ -53,7 +64,7 @@ vim.cmd('source' .. base_path .. '/nvim/modules/startscreen.vim')
 require('themes.onedark')
 require('themes.airline')
 
---------------------Lua Modules------------------
---Colorizer
-require("modules.plug-colorizer")
+-- --------------------Lua Modules------------------
+-- --Colorizer
+-- require("modules.plug-colorizer")
 
