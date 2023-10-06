@@ -13,40 +13,40 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -----------------------Source--------------------
-require("lua.general.settings")
+require("general.settings")
 
 ------------------Settings and Keys--------------
-require("lua.keys.mappings")
+require("keys.mappings")
 
 ---------------------Plugins-------------------
 require("lazy").setup("plugins") -- See plugins from any lua file that is in the folder lua/plugins/*.lua
 
 --CoC config
-require("lua.modules.coc")
+require("modules.coc")
 --Rainbow
-require("lua.modules.rainbow")
+require("modules.rainbow")
 --Git integration
-require("lua.modules.signify")
+require("modules.signify")
 -- NERD commenter
-require("lua.modules.nerdcommenter")
+require("modules.nerdcommenter")
 -- multiple cursor selector
-require("lua.modules.multipleselector")
+require("modules.multipleselector")
 -- sneak conf
-require("lua.modules.sneak")
+require("modules.sneak")
 -- Indent lines
-require("lua.modules.indentlines")
+require("modules.indentlines")
 -- Simple fold
-require("lua.modules.simplyfold")
+require("modules.simplyfold")
 -- Telescope
-require("lua.modules.telescope")
+require("modules.telescope")
 -- Startify
-require("lua.modules.startscreen")
+require("modules.startscreen")
 
 -----------------------Themes--------------------
-require('lua.themes.onedark')
-require('lua.themes.airline')
+require('themes.onedark')
+require('themes.airline')
 
 --------------------Lua Modules------------------
 --Colorizer
-require("lua.modules.plug-colorizer")
+require("modules.plug-colorizer")
 
