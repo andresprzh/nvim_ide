@@ -18,6 +18,10 @@ function Vmap(shortcut, command)
   Map('v', shortcut, command, { noremap = false, silent = true })
 end
 
+function Xmap(shortcut, command)
+  Map('x', shortcut, command, { noremap = true, silent = true })
+end
+
 
 -- Better nav for omnicomplete
 Imap('<c-j>', 'pumvisible() ? "\\<C-n>" : "\\<Down>"')
@@ -96,6 +100,11 @@ Nmap('<leader>fh', '<cmd>Telescope help_tags<cr>')
 Nmap('<C-LeftMouse>', '<Plug>(VM-Mouse-Cursor)')
 Nmap('<C-RightMouse>', '<Plug>(VM-Mouse-Word)')
 Nmap('<M-C-RightMouse>', '<Plug>(VM-Mouse-Column)')
+-- VM mappings
+Nmap('<C-d>', '<Plug>(VM-Find-Under)')
+Xmap('<C-d>', '<Plug>(VM-Find-Subword-Under))')
+Nmap('<M-j>', '<Plug>(VM-Select-Cursor-Down)')
+Nmap('<M-k>', '<Plug>(VM-Select-Cursor-Up)')
 
 -- Formating
 Vmap('<leader>h', '<Plug>(coc-format-selected)')
