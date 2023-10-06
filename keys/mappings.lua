@@ -67,7 +67,7 @@ Vmap('<C-s>', ':w<CR>')
 Nmap('<C-q>', ':q<CR>')
 
 -- <TAB>: completion.
-Imap('<TAB>', 'pumvisible() ? "\\<C-n>" : "\\<TAB>"')
+Imap('<TAB>', '"\\<C-n>" : "\\<TAB>"')
 
 -- Better tabbing
 Vmap('<', '<gv')

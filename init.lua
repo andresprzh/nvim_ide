@@ -10,17 +10,17 @@ end
 
 
 -----------------------Source--------------------
--- vim.cmd('source' .. base_path .. '/nvim/general/settings.vim')
 require("general.settings")
 
 ------------------Settings and Keys--------------
--- vim.cmd('source' .. base_path .. '/nvim/keys/mappings2.vim')
 require("keys.mappings")
 
 -----------------------Plugins-------------------
-vim.cmd('source' .. base_path .. '/nvim/plugins/plugins.vim')
+require("plugins.plugins")
+
 --CoC config
 vim.cmd('source' .. base_path .. '/nvim/modules/coc.vim')
+
 --FzF config
 -- vim.cmd('source' .. base_path .. '/nvim/modules/fzf.vim')  -- This is commented out as in the original .vim file
 --Rainbow
@@ -45,9 +45,8 @@ vim.cmd('source' .. base_path .. '/nvim/modules/telescope.vim')
 vim.cmd('source' .. base_path .. '/nvim/modules/startscreen.vim')
 
 -----------------------Themes--------------------
-vim.cmd('source' .. base_path .. '/nvim/themes/onedark.vim')
--- vim.cmd('source' .. base_path .. '/nvim/themes/nordvim.vim')  -- This is commented out as in the original .vim file
-vim.cmd('source' .. base_path .. '/nvim/themes/airline.vim')
+require('themes.onedark')
+require('themes.airline')
 
 --------------------Lua Modules------------------
 --Colorizer
