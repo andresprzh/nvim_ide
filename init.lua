@@ -1,3 +1,8 @@
+-- Auto install packer.nvim if not exists
+local install_path = vim.fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
+  vim.fn.execute('!git clone --depth 1 https://github.com/wbthomason/packer.nvim '..install_path)
+end
 -- Determine the OS and set the base path accordingly
 local os_name = vim.loop.os_uname().sysname
 local base_path
