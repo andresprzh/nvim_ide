@@ -43,8 +43,8 @@ require("lua.modules.telescope")
 require("lua.modules.startscreen")
 
 -----------------------Themes--------------------
-require('themes.onedark')
-require('themes.airline')
+require('lua.themes.onedark')
+require('lua.themes.airline')
 
 --------------------Lua Modules------------------
 --Colorizer
