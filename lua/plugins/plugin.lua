@@ -73,8 +73,8 @@ return {
     {'kyazdani42/nvim-web-devicons'},
     {'romgrk/barbar.nvim'},
 
-    -- Treesitter
-    {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'},
+    -- -- Treesitter
+    -- {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'},
 
     -- tagbar
     {'majutsushi/tagbar'},
