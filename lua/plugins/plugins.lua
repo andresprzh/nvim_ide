@@ -54,9 +54,6 @@ return {
     {'junegunn/gv.vim'},
     {'rhysd/git-messenger.vim'},
 
-    -- Markdown preview
-    {'iamcco/markdown-preview.nvim', run = 'mkdp#util#install()', ft = {'markdown', 'vim-plug'}},
-
     -- Indent lines
     {'Yggdroot/indentLine'},
 

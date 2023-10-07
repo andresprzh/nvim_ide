@@ -61,10 +61,12 @@ vim.keymap.set('n', '<C-M-c>', ':BufferCloseAllButCurrent<CR>')
 vim.keymap.set('n', '<C-]>', '<Plug>NERDCommenterToggle')
 vim.keymap.set('v', '<C-]>', '<Plug>NERDCommenterToggle<CR>gv')
 
--- signify and Git shortcuts also in modules/signify.vim
+-- signify shortcuts also in lua/modules/signify.lua
 vim.keymap.set('n', '<leader>gg', ':SignifyHunkDiff<CR>')
 vim.keymap.set('n', '<leader>ge', ':Gdiffsplit<CR>')
 vim.keymap.set('n', '<leader>gv', ':GV<CR>')
+-- Git vim-fugitive shortcuts
+vim.keymap.set('n', '<leader>gs', vim.cmd.Git)
 
 -- Telescope remaps
 local telescope_builtin = require('telescope.builtin')
