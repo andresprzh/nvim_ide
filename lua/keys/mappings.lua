@@ -46,9 +46,6 @@ vim.keymap.set('i', '<C-s>', '<ESC>:w<CR>')
 vim.keymap.set('v', '<C-s>', '<ESC>:w<CR>')
 vim.keymap.set('n', '<C-q>', vim.cmd.q)
 
--- <TAB>: completion.
-vim.keymap.set('i', '<TAB>', '"\\<C-n>" : "\\<TAB>"')
-
 -- Better tabbing
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
@@ -87,9 +84,9 @@ vim.keymap.set('n', '<leader>h', '<Plug>(coc-format-selected)')
 
 -- If conditions need to be handled within Lua code
 if vim.fn.has('win32') == 1 or vim.fn.has('win64') == 1 then
-  vim.keymap.set('n', '<C-M-n>', ':split<CR>:resize 5<CR>:terminal powershell.exe<CR>i')
+    vim.keymap.set('n', '<C-M-n>', ':split<CR>:resize 5<CR>:terminal powershell.exe<CR>i')
 elseif vim.fn.has('unix') == 1 or vim.fn.has('wsl') == 1 then
-  vim.keymap.set('n', '<C-M-n>', ':split<CR>:resize 5<CR>:terminal<CR>i')
+    vim.keymap.set('n', '<C-M-n>', ':split<CR>:resize 5<CR>:terminal<CR>i')
 end
 
 -- Close terminal with ESC
@@ -103,7 +100,7 @@ vim.keymap.set('n', '<leader>;', ':TagbarToggle<cr>')
 vim.g.coc_explorer_global_presets = {
     ['.vim'] = {
         ['root-uri'] = '~/.vim',
-    },  
+    },
     ['cocConfig'] = {
         ['root-uri'] = '~/.config/coc',
     },
@@ -141,7 +138,7 @@ vim.g.coc_explorer_global_presets = {
     },
     ['buffer'] = {
         ['sources'] = {
-        {['name'] = 'buffer', ['expand'] = true}
+            { ['name'] = 'buffer', ['expand'] = true }
         }
     }
 }

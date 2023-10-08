@@ -7,11 +7,14 @@ local cmp = require('cmp')
 require('mason').setup({})
 require('mason-lspconfig').setup({
   ensure_installed = {
-    'lua_ls',
-    'pyright',
-    -- 'jedi_language_server',
-    'dockerls',
-    'docker_compose_language_service',
+    'lua_ls',                          -- Lua
+    'pyright',                         -- Pyhton
+    'tsserver',                        -- JavaScript
+    'cssls',                           -- CSS
+    'dockerls',                        -- Docker
+    'docker_compose_language_service', -- Docker Compoose
+    'rust_analyzer',                   -- Rust
+    'clangd',                          -- C++
   },
   handlers = {
     lsp.default_setup,
@@ -29,14 +32,13 @@ null_ls.setup({
 })
 
 -- ***** CONFIGURATE THE LSP *****
-
 require('luasnip.loaders.from_snipmate').lazy_load()
 cmp.setup({
   sources = {
-    {name = 'nvim_lsp'}, -- LSP autocomplete
-    {name = 'luasnip'}, -- Snippets
+    { name = 'nvim_lsp' }, -- LSP autocomplete
+    { name = 'luasnip' },  -- Snippets
   },
-  preselect = 'item', -- Select first item 
+  preselect = 'item',      -- Select first item
   completion = {
     completeopt = 'menu,menuone,noinsert'
   },
@@ -55,7 +57,7 @@ cmp.setup({
   -- Change how the items in the LSP window are shown
   formatting = {
     -- changing the order of fields so the icon is at the end
-    fields = {'abbr', 'kind', 'menu'},
+    fields = { 'abbr', 'kind', 'menu' },
     -- Change the icons in the LSP menu
     format = function(entry, item)
       local menu_icon = {
@@ -70,25 +72,50 @@ cmp.setup({
     end,
   },
 })
+-- Simbols for the lintener
+lsp.set_sign_icons({
+  error = '✘',
+  warn = '▲',
+  hint = '⚑',
+  info = '»'
+})
+
+-- Create function to AUTOFORMAT on save
+local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
+local lsp_format_on_save = function(bufnr)
+  vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+  vim.api.nvim_create_autocmd('BufWritePre', {
+    group = augroup,
+    buffer = bufnr,
+    callback = function()
+      -- Autoformat
+      vim.lsp.buf.format({
+        async = false,
+        timeout_ms = 1000,
+        filter = function(client)
+          return client.name == "null-ls"
+        end
+      })
+    end,
+  })
+end
+
 -- Command lsp on only the buffer
 lsp.on_attach(function(_, bufnr)
   local opts = { buffer = bufnr, remap = false }
-  -- see :help lsp-zero-keybindings
-  -- to learn the available actions
+  -- see :help lsp-zero-keybindings to learn the available actions
   vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
   vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, {})
-  -- lsp.default_keymaps({buffer = bufnr})
+  -- Add the function to AUTOFORMAT only on the buffer
+  lsp_format_on_save(bufnr)
 end)
 
 -- ***** Set up the LSP *****
 lsp.setup()
-vim.diagnostic.config({
-  virtual_text = true
-})
 
--- ***** OTHER FUNCTIONS *****
--- Only format for the specific files
-local filetypes = { '*.py', }
-for _, filetype in ipairs(filetypes) do
-  vim.cmd('autocmd BufWritePre ' .. filetype .. ' silent! :LspZeroFormat')
-end
+-- SHOW THE DIAGNOSTIC TEXT NOT AS INLINE UT AS A HOVER WINDOW
+vim.diagnostic.config({
+  virtual_text = false
+})
+vim.o.updatetime = 250
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
