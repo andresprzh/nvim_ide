@@ -20,10 +20,9 @@ vim.g.startify_custom_header = {
     '|          Gotta Code Fast         |',  
     '*----------------------------------*',
 }
-
+-- help in  :h startify
+vim.g.startify_files_number = 5
 vim.g.startify_lists = {
-    { type = 'files', header = {'   Files'} },
     { type = 'dir', header = {'   Current Directory ' .. vim.fn.getcwd()} },
     { type = 'sessions', header = {'   Sessions'} },
-    { type = 'bookmarks', header = {'   Bookmarks'} },
 }

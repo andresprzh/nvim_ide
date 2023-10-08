@@ -41,10 +41,10 @@ require("modules.telescope")
 require("modules.startscreen")
 
 -----------------------Themes--------------------
-require('themes.onedark')
-require('themes.airline')
-
---------------------Lua Modules------------------
+require('themes.nightfox')
+require('themes.statusline')
+-- change Tab bar color
+require('themes.tabbar')
 --Colorizer
 require("modules.plug-colorizer")
 
