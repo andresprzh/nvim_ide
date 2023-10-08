@@ -39,7 +39,6 @@ return {
     {'L3MON4D3/LuaSnip'},
     {'saadparwaiz1/cmp_luasnip'},
     {'honza/vim-snippets'},
-    {'onsails/lspkind.nvim'},
 
 
     -- Plug for comment
