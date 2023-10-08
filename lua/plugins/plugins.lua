@@ -1,14 +1,25 @@
 return {
 
-    -- Startify
-    {'mhinz/vim-startify'},
-
-    -- Better Syntax Support
-    {'sheerun/vim-polyglot'},
-
+    -- ****** THEMES ******
     -- Status bar
     {'vim-airline/vim-airline'},
     {'vim-airline/vim-airline-themes'},
+    -- Theme for nvim
+    {'EdenEast/nightfox.nvim'},
+    -- Startify
+    {'mhinz/vim-startify'},
+    -- Change tab bar in nvim
+    {
+        'romgrk/barbar.nvim',
+        dependencies = {
+          'lewis6991/gitsigns.nvim', -- OPTIONAL: for git status
+          'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
+        },
+    },
+
+
+    -- Better Syntax Support
+    {'sheerun/vim-polyglot'},
 
     -- Auto complete code
     {'neoclide/coc.nvim', branch = 'release'},
@@ -18,10 +29,7 @@ return {
     -- Plug for comment
     {'scrooloose/nerdcommenter'},
 
-    -- Theme for nvim
-    {'joshdick/onedark.vim'},
-
-    -- Auto pairs for '(' '[' '{'
+    -- -- Auto pairs for '(' '[' '{'
     {'jiangmiao/auto-pairs'},
 
     -- Multiple cursor editor
@@ -34,39 +42,33 @@ return {
     {'justinmk/vim-sneak'},
 
     -- Telescope fuzzi finder
-    {'nvim-lua/popup.nvim'},
-    {'nvim-lua/plenary.nvim'},
-    {'nvim-telescope/telescope.nvim'},
+    {
+        'nvim-telescope/telescope.nvim', 
+        tag = '0.1.3',
+        dependencies = { 'nvim-lua/plenary.nvim' }
+    },
 
-    -- vim-rooter
-    {'airblade/vim-rooter'},
-
-    -- lua colorizer
+    -- lua colorizer (higlight with color)
     {'norcalli/nvim-colorizer.lua'},
 
-    -- Rainbow
+    -- Rainbow, color for parentheses
     {'junegunn/rainbow_parentheses.vim'},
 
-    -- plugins to integrate git
+    -- ****** PLUGINS TO INTEGRATE GIT ******
     {'mhinz/vim-signify'},
     {'tpope/vim-fugitive'},
-    {'tpope/vim-rhubarb'},
+    -- Commit browser
     {'junegunn/gv.vim'},
+    -- Show commit message an autr (like git blame)
     {'rhysd/git-messenger.vim'},
 
-    -- Indent lines
+    -- Indent lines (Show ventical lines foor every identation)
     {'Yggdroot/indentLine'},
 
-    -- bookmarks
-    {'MattesGroeger/vim-bookmarks'},
-
-    -- Change tab bar in nvim
-    {'kyazdani42/nvim-web-devicons'},
-    {'romgrk/barbar.nvim'},
-
-    -- tagbar
+    -- tagbar use (<leader>;) to open or close it at the right side
     {'majutsushi/tagbar'},
 
-    -- folding code
+    -- folding python code use shortcut za to toggle fold, 
+    -- more information :help fold-command
     {'tmhedberg/SimpylFold'},
 }

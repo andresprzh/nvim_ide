@@ -41,10 +41,8 @@ require("modules.telescope")
 require("modules.startscreen")
 
 -----------------------Themes--------------------
-require('themes.onedark')
+require('themes.nightfox')
 require('themes.airline')
-
---------------------Lua Modules------------------
 --Colorizer
 require("modules.plug-colorizer")
 
