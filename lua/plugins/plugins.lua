@@ -30,17 +30,17 @@ return {
     {'neovim/nvim-lspconfig'},
     {'hrsh7th/cmp-nvim-lsp'},
     {'hrsh7th/nvim-cmp'},
-    {'L3MON4D3/LuaSnip'},
     -- ensure the configuration of the language servers
     {'williamboman/mason.nvim'},
     {'williamboman/mason-lspconfig.nvim'},
     {'jay-babu/mason-null-ls.nvim'},
     {'jose-elias-alvarez/null-ls.nvim'},
     -- Snippets
+    {'L3MON4D3/LuaSnip'},
     {'saadparwaiz1/cmp_luasnip'},
-    -- {'neoclide/coc.nvim', branch = 'release'},
-    -- {'zchee/deoplete-jedi'},
-    -- {'honza/vim-snippets'},
+    {'honza/vim-snippets'},
+    {'onsails/lspkind.nvim'},
+
 
     -- Plug for comment
     {'scrooloose/nerdcommenter'},
