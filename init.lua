@@ -42,7 +42,9 @@ require("modules.startscreen")
 
 -----------------------Themes--------------------
 require('themes.nightfox')
-require('themes.airline')
+require('themes.statusline')
+-- change Tab bar color
+require('themes.tabbar')
 --Colorizer
 require("modules.plug-colorizer")
 

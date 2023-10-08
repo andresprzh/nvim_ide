@@ -2,8 +2,12 @@ return {
 
     -- ****** THEMES ******
     -- Status bar
-    {'vim-airline/vim-airline'},
-    {'vim-airline/vim-airline-themes'},
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 
+            'nvim-tree/nvim-web-devicons',
+        }
+    },
     -- Theme for nvim
     {'EdenEast/nightfox.nvim'},
     -- Startify
