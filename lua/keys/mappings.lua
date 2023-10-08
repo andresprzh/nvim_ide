@@ -25,20 +25,20 @@ vim.keymap.set('n', '<C-c>', 'viwy')
 -- Copy in visual mode with Ctr+c
 vim.keymap.set('v', '<C-c>', 'y')
 
--- Quote and unquote
+-- Quote
 vim.keymap.set('n', "'", "ciw''<ESC>Pb")
 vim.keymap.set('n', '"', 'ciw""<ESC>Pb')
 vim.keymap.set('v', "'", "c''<ESC>P")
 vim.keymap.set('v', '"', 'c""<ESC>P')
 
--- Remove quote of the current word
-vim.keymap.set('n', "<leader>'", "di'pbdb")
-vim.keymap.set('n', '<leader>"', 'di"pbdb')
+-- Unquote current word
+vim.keymap.set('n', "<leader>'", "diwpb2h2x")
+vim.keymap.set('n', '<leader>"', "diwpb2h2x")
 
 -- TAB in general mode will move to text buffer
-vim.keymap.set('n', '<TAB>', ':bnext<CR>')
+vim.keymap.set('n', '<TAB>', vim.cmd.BufferNext)
 -- SHIFT-TAB will go back
-vim.keymap.set('n', '<S-TAB>', ':bprevious<CR>')
+vim.keymap.set('n', '<S-TAB>', vim.cmd.BufferPrevious)
 
 -- Alternate way to save
 vim.keymap.set('n', '<C-s>', vim.cmd.w)
@@ -67,16 +67,6 @@ vim.keymap.set('n', '<leader>ge', ':Gdiffsplit<CR>')
 vim.keymap.set('n', '<leader>gv', ':GV<CR>')
 -- Git vim-fugitive shortcuts
 vim.keymap.set('n', '<leader>gs', vim.cmd.Git)
-
--- Telescope remaps
-local telescope_builtin = require('telescope.builtin')
---local telescope_actions = require('telescope.actions')
-local actions = require('telescope.actions')
-vim.keymap.set('n', '<C-p>', telescope_builtin.git_files, {})
-vim.keymap.set('n', '<leader>ff', telescope_builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', telescope_builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', telescope_builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', telescope_builtin.help_tags, {})
 
 -- VM mappings
 vim.g.VM_maps = {
