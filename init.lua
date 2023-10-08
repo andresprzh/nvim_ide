@@ -20,12 +20,12 @@ require("keys.mappings")
 
 ---------------------Plugins-------------------
 require("lazy").setup("plugins") -- See plugins from any lua file that is in the folder lua/plugins/*.lua
-
---CoC config
-require("modules.coc")
---Rainbow
+-- Auto Complete
+-- require("modules.coc")
+require("modules.lsp")
+-- Rainbow
 require("modules.rainbow")
---Git integration
+-- Git integration
 require("modules.signify")
 -- NERD commenter
 require("modules.nerdcommenter")
