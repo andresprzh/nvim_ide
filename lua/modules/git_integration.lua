@@ -10,7 +10,7 @@ local neogit = require('neogit')
 -- MAPPINGS
 -- See panel showing current git information
 vim.keymap.set('n', '<leader>gs', function() neogit.open({ kind = "split" }) end, {})
-vim.keymap.set('n', '<S-g>', neogit.open, {})
+vim.keymap.set('n', '<C-g>', neogit.open, {})
 -- Diff split for the current file in buffer
 vim.keymap.set('n', '<leader>ge', ':Gdiffsplit<CR>')
 -- Diff split for the current chunk
