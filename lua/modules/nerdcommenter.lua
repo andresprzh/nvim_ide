@@ -19,5 +19,10 @@ vim.g.NERDCommentEmptyLines = 1
 -- " Enable trimming of trailing whitespace when uncommenting
 vim.g.NERDTrimTrailingWhitespace = 1
 
--- " Enable NERDCommenterToggle to check all selected lines is commented or not 
+-- " Enable NERDCommenterToggle to check all selected lines is commented or not
 vim.g.NERDToggleCheckAllLines = 1
+
+
+-- Mappings
+vim.keymap.set('n', '<C-]>', '<Plug>NERDCommenterToggle')
+vim.keymap.set('v', '<C-]>', '<Plug>NERDCommenterToggle<CR>gv')

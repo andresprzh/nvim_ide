@@ -21,12 +21,11 @@ require("keys.mappings")
 ---------------------Plugins-------------------
 require("lazy").setup("plugins") -- See plugins from any lua file that is in the folder lua/plugins/*.lua
 -- Auto Complete
--- require("modules.coc")
 require("modules.lsp")
 -- Rainbow
 require("modules.rainbow")
 -- Git integration
-require("modules.signify")
+require("modules.git_integration")
 -- NERD commenter
 require("modules.nerdcommenter")
 -- sneak conf
@@ -49,4 +48,3 @@ require('themes.statusline')
 require('themes.tabbar')
 --Colorizer
 require("modules.plug-colorizer")
-
