@@ -86,4 +86,8 @@ return {
     -- folding python code use shortcut za to toggle fold,
     -- more information :help fold-command
     { 'tmhedberg/SimpylFold' },
+
+
+    -- Explorer tree
+    {'nvim-tree/nvim-tree.lua'},
 }

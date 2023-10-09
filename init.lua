@@ -39,6 +39,8 @@ require("modules.simplyfold")
 require("modules.telescope")
 -- Startify
 require("modules.startscreen")
+-- Nvim Tree
+require("modules.nvim_tree")
 
 -----------------------Themes--------------------
 require('themes.nightfox')

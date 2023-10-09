@@ -81,6 +81,7 @@ lsp.set_sign_icons({
 })
 
 -- Create function to AUTOFORMAT on save
+--  More information in https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/lsp.md#using-built-in-functions
 local augroup = vim.api.nvim_create_augroup('LspFormatting', {})
 local lsp_format_on_save = function(bufnr)
   vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
@@ -92,9 +93,10 @@ local lsp_format_on_save = function(bufnr)
       vim.lsp.buf.format({
         async = false,
         timeout_ms = 1000,
-        filter = function(client)
-          return client.name == "null-ls"
-        end
+        -- Filter to only apply format to clients that use null-la
+        -- filter = function(client)
+        --   return client.name == "null-ls"
+        -- end
       })
     end,
   })
