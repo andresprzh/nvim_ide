@@ -54,18 +54,6 @@ vim.keymap.set('v', '>', '>gv')
 vim.keymap.set('n', '<C-M-d>', ':BufferClose<CR>')
 vim.keymap.set('n', '<C-M-c>', ':BufferCloseAllButCurrent<CR>')
 
--- Comment
-vim.keymap.set('n', '<C-]>', '<Plug>NERDCommenterToggle')
-vim.keymap.set('v', '<C-]>', '<Plug>NERDCommenterToggle<CR>gv')
-
--- signify shortcuts also in lua/modules/signify.lua
-vim.keymap.set('n', '<leader>gg', ':SignifyHunkDiff<CR>')
--- Git vim-fugitive shortcuts
-vim.keymap.set('n', '<leader>ge', ':Gdiffsplit<CR>')
--- See panel showing current git information
-vim.keymap.set('n', '<leader>gs', vim.cmd.Git)
--- Git GV commit browser commands
-vim.keymap.set('n', '<leader>gv', ':GV!<CR>')
 
 -- VM mappings
 vim.g.VM_maps = {

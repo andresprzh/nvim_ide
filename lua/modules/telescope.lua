@@ -1,6 +1,6 @@
 -- if pcall(require, 'telescope') then
 local actions = require('telescope.actions')
-require('telescope').setup{
+require('telescope').setup {
   config = {
     vimgrep_arguments = {
       'rg',
@@ -27,9 +27,9 @@ require('telescope').setup{
         mirror = false,
       },
     },
-    file_sorter =  require'telescope.sorters'.get_fuzzy_file,
+    file_sorter = require 'telescope.sorters'.get_fuzzy_file,
     file_ignore_patterns = {},
-    generic_sorter =  require'telescope.sorters'.get_generic_fuzzy_sorter,
+    generic_sorter = require 'telescope.sorters'.get_generic_fuzzy_sorter,
     shorten_path = true,
     winblend = 0,
     width = 0.75,
@@ -41,9 +41,9 @@ require('telescope').setup{
     color_devicons = true,
     use_less = true,
     set_env = { ['COLORTERM'] = 'truecolor' }, -- default = nil,
-    file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
-    grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
-    qflist_previewer = require'telescope.previewers'.vim_buffer_qflist.new,
+    file_previewer = require 'telescope.previewers'.vim_buffer_cat.new,
+    grep_previewer = require 'telescope.previewers'.vim_buffer_vimgrep.new,
+    qflist_previewer = require 'telescope.previewers'.vim_buffer_qflist.new,
 
     -- custom mappings
     mappings = {
@@ -53,13 +53,13 @@ require('telescope').setup{
     },
 
     -- Developer configurations: Not meant for general override
-    buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker
+    buffer_previewer_maker = require 'telescope.previewers'.buffer_previewer_maker
   }
 }
 -- Telescope remaps
 local telescope_builtin = require('telescope.builtin')
-vim.keymap.set('n', '<C-p>', telescope_builtin.git_files, {})
-vim.keymap.set('n', '<leader>ff', telescope_builtin.find_files, {})
+vim.keymap.set('n', '<C-p>', function() telescope_builtin.find_files({ hidden = true }) end, {})
+vim.keymap.set('n', '<leader>ff', function() telescope_builtin.git_files({ hidden = true }) end, {})
 vim.keymap.set('n', '<leader>fg', telescope_builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', telescope_builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', telescope_builtin.help_tags, {})
