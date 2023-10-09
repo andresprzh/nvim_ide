@@ -46,9 +46,6 @@ vim.keymap.set('i', '<C-s>', '<ESC>:w<CR>')
 vim.keymap.set('v', '<C-s>', '<ESC>:w<CR>')
 vim.keymap.set('n', '<C-q>', vim.cmd.q)
 
--- <TAB>: completion.
-vim.keymap.set('i', '<TAB>', '"\\<C-n>" : "\\<TAB>"')
-
 -- Better tabbing
 vim.keymap.set('v', '<', '<gv')
 vim.keymap.set('v', '>', '>gv')
@@ -63,10 +60,12 @@ vim.keymap.set('v', '<C-]>', '<Plug>NERDCommenterToggle<CR>gv')
 
 -- signify shortcuts also in lua/modules/signify.lua
 vim.keymap.set('n', '<leader>gg', ':SignifyHunkDiff<CR>')
-vim.keymap.set('n', '<leader>ge', ':Gdiffsplit<CR>')
-vim.keymap.set('n', '<leader>gv', ':GV<CR>')
 -- Git vim-fugitive shortcuts
+vim.keymap.set('n', '<leader>ge', ':Gdiffsplit<CR>')
+-- See panel showing current git information
 vim.keymap.set('n', '<leader>gs', vim.cmd.Git)
+-- Git GV commit browser commands
+vim.keymap.set('n', '<leader>gv', ':GV!<CR>')
 
 -- VM mappings
 vim.g.VM_maps = {
@@ -87,9 +86,9 @@ vim.keymap.set('n', '<leader>h', '<Plug>(coc-format-selected)')
 
 -- If conditions need to be handled within Lua code
 if vim.fn.has('win32') == 1 or vim.fn.has('win64') == 1 then
-  vim.keymap.set('n', '<C-M-n>', ':split<CR>:resize 5<CR>:terminal powershell.exe<CR>i')
+    vim.keymap.set('n', '<C-M-n>', ':split<CR>:resize 5<CR>:terminal powershell.exe<CR>i')
 elseif vim.fn.has('unix') == 1 or vim.fn.has('wsl') == 1 then
-  vim.keymap.set('n', '<C-M-n>', ':split<CR>:resize 5<CR>:terminal<CR>i')
+    vim.keymap.set('n', '<C-M-n>', ':split<CR>:resize 5<CR>:terminal<CR>i')
 end
 
 -- Close terminal with ESC
@@ -99,53 +98,5 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>:q<CR>')
 -- Toggle the Tagbar that shows the tags of the current file (classes, functions, variables)
 vim.keymap.set('n', '<leader>;', ':TagbarToggle<cr>')
 
--- EXPLORER
-vim.g.coc_explorer_global_presets = {
-    ['.vim'] = {
-        ['root-uri'] = '~/.vim',
-    },  
-    ['cocConfig'] = {
-        ['root-uri'] = '~/.config/coc',
-    },
-    ['tab'] = {
-        ['position'] = 'tab',
-        ['quit-on-open'] = true,
-    },
-    ['tab:$'] = {
-        ['position'] = 'tab:$',
-        ['quit-on-open'] = true,
-    },
-    ['floating'] = {
-        ['position'] = 'floating',
-        ['open-action-strategy'] = 'sourceWindow',
-    },
-    ['floatingTop'] = {
-        ['position'] = 'floating',
-        ['floating-position'] = 'center-top',
-        ['open-action-strategy'] = 'sourceWindow',
-    },
-    ['floatingLeftside'] = {
-        ['position'] = 'floating',
-        ['floating-position'] = 'left-center',
-        ['floating-width'] = 50,
-        ['open-action-strategy'] = 'sourceWindow',
-    },
-    ['floatingRightside'] = {
-        ['position'] = 'floating',
-        ['floating-position'] = 'right-center',
-        ['floating-width'] = 50,
-        ['open-action-strategy'] = 'sourceWindow',
-    },
-    ['simplify'] = {
-        ['file-child-template'] = '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]',
-    },
-    ['buffer'] = {
-        ['sources'] = {
-        {['name'] = 'buffer', ['expand'] = true}
-        }
-    }
-}
--- Open exploorer
-vim.keymap.set("n", "<space><S-e>", ":CocCommand explorer --preset floating<CR>", opts)
 -- Open exploorer side
-vim.keymap.set("n", "<space>e", ":CocCommand explorer --preset simplify<CR>", opts)
+vim.keymap.set("n", "<space>e", ":NvimTreeFindFile <CR>", {})
