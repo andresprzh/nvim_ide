@@ -30,7 +30,8 @@ return {
   { 'williamboman/mason.nvim' },
   { 'williamboman/mason-lspconfig.nvim' },
   { 'jay-babu/mason-null-ls.nvim' },
-  { 'jose-elias-alvarez/null-ls.nvim' },
+  -- { 'jose-elias-alvarez/null-ls.nvim' },
+  { 'nvimtools/none-ls.nvim' },
   -- Snippets
   { 'L3MON4D3/LuaSnip' },
   { 'saadparwaiz1/cmp_luasnip' },

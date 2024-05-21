@@ -22,12 +22,14 @@ require('mason-lspconfig').setup({
 })
 -- Formatting autoinstall setup
 require("mason-null-ls").setup({
-  ensure_installed = { "autopep8" }
+  ensure_installed = { "autopep8", "djlint" }
 })
 local null_ls = require("null-ls")
 null_ls.setup({
   sources = {
-    null_ls.builtins.formatting.autopep8,
+    -- autopep8 is deprected
+    -- null_ls.builtins.formatting.utopep8,
+    null_ls.builtins.formatting.djlint
   },
 })
 
