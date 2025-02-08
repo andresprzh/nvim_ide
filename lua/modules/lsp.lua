@@ -9,7 +9,7 @@ require('mason-lspconfig').setup({
   ensure_installed = {
     'lua_ls',                          -- Lua
     'pyright',                         -- Pyhton
-    'tsserver',                        -- JavaScript
+    'biome',                           -- JavaScript
     'cssls',                           -- CSS
     'dockerls',                        -- Docker
     'docker_compose_language_service', -- Docker Compoose
