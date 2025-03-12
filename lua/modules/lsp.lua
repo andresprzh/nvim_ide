@@ -29,7 +29,9 @@ null_ls.setup({
   sources = {
     -- autopep8 is deprected
     -- null_ls.builtins.formatting.utopep8,
-    null_ls.builtins.formatting.djlint
+    null_ls.builtins.formatting.djlint.with({
+      filetypes = { "django" } -- Exclude "html" by not adding it
+    }),
   },
 })
 
