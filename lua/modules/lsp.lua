@@ -39,6 +39,7 @@ null_ls.setup({
 require('luasnip.loaders.from_snipmate').lazy_load()
 cmp.setup({
   sources = {
+    { name = 'copilot' },  -- copilot
     { name = 'nvim_lsp' }, -- LSP autocomplete
     { name = 'luasnip' },  -- Snippets
   },
@@ -48,8 +49,22 @@ cmp.setup({
   },
   -- modify keybind for autocomplete
   mapping = cmp.mapping.preset.insert({
-    ['<TAB>'] = cmp.mapping.select_next_item(),
-    ['<S-TAB>'] = cmp.mapping.select_prev_item(),
+    ['<Tab>'] = function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif require("copilot.suggestion").is_visible() then
+        require("copilot.suggestion").accept()
+      else
+        fallback()
+      end
+    end,
+    ['<S-Tab>'] = function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      else
+        fallback()
+      end
+    end,
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
     ['<C-Space>'] = cmp.mapping.complete(),
   }),
@@ -70,11 +85,18 @@ cmp.setup({
         buffer = 'Ω',
         path = '🖫',
         nvim_lua = 'Π',
+        copilot = '󰚩', -- Add Copilot icon
       }
       item.menu = menu_icon[entry.source.name]
       return item
     end,
   },
+  -- Enable Copilot in comments
+  enabled = function()
+    local context = require('cmp.config.context')
+    -- Only enable Copilot if the cursor is not inside a comment or string
+    return not context.in_treesitter_capture("comment") and not context.in_treesitter_capture("string")
+  end,
 })
 -- Simbols for the lintener
 lsp.set_sign_icons({
