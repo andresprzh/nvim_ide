@@ -95,4 +95,22 @@ return {
 
   -- Explorer tree
   { 'nvim-tree/nvim-tree.lua' },
+
+  -- ******COPILOT CONFIGURATION******
+  -- Copilot
+  {
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+  },
+  -- Copilot CMP Integration
+  {
+    "zbirenbaum/copilot-cmp",
+    dependencies = { "copilot.lua" },
+  },
+  -- nvim-treesitter to handle comment copilot sugestions
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+  },
 }
