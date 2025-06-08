@@ -72,7 +72,15 @@ return {
   -- Commit browser
   { 'junegunn/gv.vim' },
   -- Show commit message an autr (like git blame)
-  { 'rhysd/git-messenger.vim' },
+  -- { 'rhysd/git-messenger.vim' },
+  {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup {
+        current_line_blame = true, -- Enable inline blame
+      }
+    end
+  },
   -- Handle Git stash and commits
   {
     'NeogitOrg/neogit',
