@@ -24,5 +24,5 @@ vim.g.NERDToggleCheckAllLines = 1
 
 
 -- Mappings
-vim.keymap.set('n', '<C-]>', '<Plug>NERDCommenterToggle')
-vim.keymap.set('v', '<C-]>', '<Plug>NERDCommenterToggle<CR>gv')
+vim.keymap.set('n', '<C-[>', '<Plug>NERDCommenterToggle')
+vim.keymap.set('v', '<C-[>', '<Plug>NERDCommenterToggle<CR>gv')
