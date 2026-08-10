@@ -40,6 +40,8 @@ require("modules.telescope")
 require("modules.startscreen")
 -- Nvim Tree
 require("modules.nvim_tree")
+-- Claude
+require("modules.claude")
 
 -----------------------Themes--------------------
 require('themes.nightfox')
