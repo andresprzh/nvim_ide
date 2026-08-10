@@ -40,8 +40,6 @@ require("modules.telescope")
 require("modules.startscreen")
 -- Nvim Tree
 require("modules.nvim_tree")
--- Copilot
-require("modules.copilot")
 
 -----------------------Themes--------------------
 require('themes.nightfox')
